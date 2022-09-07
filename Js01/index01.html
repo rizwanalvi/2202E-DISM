@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        input[type=button]{
+            height: 150px;
+            width: 150px;
+            font-size: 50px;
+        }
+        div{
+            display: flex;
+            flex-direction: row;
+        }
+        .O{
+            background-color: olive;
+            color: whitesmoke;
+        }
+        .X{
+            background-color: goldenrod;
+            color: whitesmoke;
+        }
+    </style>
+</head>
+<body>
+    <div>
+    <input type="button" value="" id="A1" >
+    <input type="button" value="" id="A2" >
+    <input type="button" value="" id="A3" >
+</div>
+<div>
+    <input type="button" value="" id="B1" >
+    <input type="button" value="" id="B2" >
+    <input type="button" value="" id="B3" >
+</div>
+<div>
+    <input type="button" value="" id="C1" >
+    <input type="button" value="" id="C2" >
+    <input type="button" value="" id="C3" >
+</div>
+    <script>
+        let turn = true;
+        let A1 = document.getElementById('A1');
+        A1.addEventListener("click",function(){
+            if(turn){
+
+                this.value = "O";
+                this.setAttribute("disabled",true);
+                turn = false;
+                this.classList.add('O');
+            }
+            else{
+
+                this.value = "X";
+                this.setAttribute("disabled",true);
+                turn = true;
+                this.classList.add('X');
+            }
+           
+
+        });
+        let A2 = document.getElementById('A2');
+        A2.addEventListener("click",function(){
+            if(turn){
+
+                this.value = "O";
+                this.setAttribute("disabled",true);
+                turn = false;
+                this.classList.add('O');
+            }
+            else{
+
+                this.value = "X";
+                this.setAttribute("disabled",true);
+                turn = true;
+                this.classList.add('X');
+            }
+           
+
+        });
+        let A3 = document.getElementById('A3');
+        A3.addEventListener("click",function(){
+            if(turn){
+
+                this.value = "O";
+                this.setAttribute("disabled",true);
+                this.classList.add('O');
+                turn = false;
+            }
+            else{
+
+                this.value = "X";
+                this.setAttribute("disabled",true);
+                turn = true;
+                this.classList.add('X');
+            }
+           
+
+        });
+
+
+
+        let B1 = document.getElementById('B1');
+        B1.addEventListener("click",function(){
+            if(turn){
+
+                this.value = "O";
+                this.setAttribute("disabled",true);
+                turn = false;
+                this.classList.add('O');
+            }
+            else{
+
+                this.value = "X";
+                this.setAttribute("disabled",true);
+                turn = true;
+                this.classList.add('X');
+            }
+           
+
+        });
+        let B2 = document.getElementById('B2');
+        B2.addEventListener("click",function(){
+            if(turn){
+
+                this.value = "O";
+                this.setAttribute("disabled",true);
+                turn = false;
+                this.classList.add('O');
+            }
+            else{
+
+                this.value = "X";
+                this.setAttribute("disabled",true);
+                turn = true;
+                this.classList.add('X');
+            }
+           
+
+        });
+        let B3 = document.getElementById('B3');
+        B3.addEventListener("click",function(){
+            if(turn){
+
+                this.value = "O";
+                this.setAttribute("disabled",true);
+                this.classList.add('O');
+                turn = false;
+            }
+            else{
+
+                this.value = "X";
+                this.setAttribute("disabled",true);
+                turn = true;
+                this.classList.add('X');
+            }
+           
+
+        });
+
+
+
+
+        let C1 = document.getElementById('C1');
+        C1.addEventListener("click",function(){
+            if(turn){
+
+                this.value = "O";
+                this.setAttribute("disabled",true);
+                turn = false;
+                this.classList.add('O');
+            }
+            else{
+
+                this.value = "X";
+                this.setAttribute("disabled",true);
+                turn = true;
+                this.classList.add('X');
+            }
+           
+
+        });
+        let C2 = document.getElementById('C2');
+        C2.addEventListener("click",function(){
+            if(turn){
+
+                this.value = "O";
+                this.setAttribute("disabled",true);
+                turn = false;
+                this.classList.add('O');
+            }
+            else{
+
+                this.value = "X";
+                this.setAttribute("disabled",true);
+                turn = true;
+                this.classList.add('X');
+            }
+           
+
+        });
+        let C3 = document.getElementById('C3');
+        C3.addEventListener("click",function(){
+            if(turn){
+
+                this.value = "O";
+                this.setAttribute("disabled",true);
+                this.classList.add('O');
+                turn = false;
+            }
+            else{
+
+                this.value = "X";
+                this.setAttribute("disabled",true);
+                turn = true;
+                this.classList.add('X');
+            }
+           
+
+        });
+    </script>
+    
+</body>
+</html>

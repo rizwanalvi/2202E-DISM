@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    
+</head>
+<body>
+
+    <input type="button" id="btnRed"  value="Red">
+    <input type="button" id="btnBlue"  value="Blue">
+    <input type="button" id="btnImg"  value="Show Image">
+    <script>
+        var btnRed = document.getElementById('btnRed');
+        var btnBlue = document.getElementById('btnBlue');
+        btnRed.addEventListener("click",function(){
+        document.body.style.backgroundColor = 'red';        
+
+        });
+        btnBlue.addEventListener("click",function(){
+
+            document.body.style.backgroundColor = 'blue';
+        });
+    </script>
+</body>
+</html>
