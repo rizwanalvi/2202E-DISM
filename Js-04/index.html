@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
+</head>
+<body>
+   <div id="Question" class="alert alert-danger"> </div>
+   <div class="alert alert-warning">
+    <div class="form-control-check">
+    <input type="radio" name="ans" value="0"><label for="" id="rd01"></label>
+        </div>  
+        <div class="form-control-check">
+    <input type="radio" name="ans" value="1"><label for="" id="rd02"></label>
+    </div>
+    <div class="form-control-check">
+    <input type="radio" name="ans" value="2"><label for="" id="rd03"></label>
+    </div>
+    <div class="form-control-check">
+    <input type="radio" name="ans" value="3"><label for="" id="rd04"></label>
+    </div>
+   </div>
+    <button id="btnPrev" class="btn btn-primary">Prev</button>
+    <button id="btnNext" class="btn btn-success">Next</button>
+    <script>
+        var Qid =0;
+        var btnNext =document.getElementById('btnNext');
+        var btnPrev =document.getElementById('btnPrev');
+        var Question = document.getElementById('Question');
+        var rd01 = document.getElementById('rd01');
+        var rd02 = document.getElementById('rd02');
+        var rd03 = document.getElementById('rd03');
+        var rd04 = document.getElementById('rd04');
+
+        var QuestionsBank =["Which one of the follwing is the largest river of Pakistan?",
+                "Which one of the following the the landlock country?"];
+        var Choice =[["Ravi","Indus","Sutlej","Jhelum"],
+        ["Pakistan","India","Iran","Afganistan"]
+    
+    ];
+   
+             Question.innerHTML = QuestionsBank[Qid];
+             rd01.innerHTML = Choice[Qid][0];
+             rd02.innerHTML = Choice[Qid][1];
+             rd03.innerHTML = Choice[Qid][2];
+             rd04.innerHTML = Choice[Qid][3];
+              
+               
+            btnNext.addEventListener('click',()=>{
+                Qid++;
+                getQuestions(Qid);
+
+
+            });
+
+            btnPrev.addEventListener("click",()=>{
+                Qid--;
+                getQuestions(Qid);
+            });
+
+         
+         
+         
+         
+            let getQuestions = (qid)=>{
+
+              
+                Question.innerHTML = QuestionsBank[Qid];
+             rd01.innerHTML = Choice[Qid][0];
+             rd02.innerHTML = Choice[Qid][1];
+             rd03.innerHTML = Choice[Qid][2];
+             rd04.innerHTML = Choice[Qid][3];
+              
+            }
+
+    </script>
+</body>
+</html>

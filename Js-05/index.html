@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://kit.fontawesome.com/c637592d13.js" crossorigin="anonymous"></script>
+    <style>
+        body{
+        position: relative;
+        height: 100vh;
+    }
+    i{
+        font-size: 5rem;
+    }
+    i:hover{
+        cursor: crosshair;
+        color: gainsboro;
+    }
+    .v{
+        display: none;
+    }
+    </style>
+</head>
+<body>
+    <h1></h1>
+  <!--   <i class="fab fa-fly"></i>
+    <i class="fab fa-fly"></i>
+    <i class="fab fa-fly"></i>
+    -->
+   
+  <script>
+    let score =0;
+    let h1 = document.getElementsByTagName('h1');
+    let ColorCode =["blue","purple","goldenrod"];
+      /*    window.addEventListener("load",function(){
+            let score =0;
+         let iCon = document.getElementsByTagName('i');
+           let h1 = document.getElementsByTagName('h1');
+           for(let i=0;i<iCon.length;i++){
+                iCon[i].addEventListener('click',function(){
+                            this.remove();
+                            score++;
+                            h1[0].innerHTML = score;
+
+                });
+           } 
+
+
+        });
+        */
+       let position =0;
+        setInterval(function(){
+            let i = document.createElement('i');
+            position = Math.floor(Math.random()*ColorCode.length);
+            i.classList.add('fab');
+            i.classList.add('fa-fly');
+            i.style.color = ColorCode[position];
+            
+            i.addEventListener('click',function(){
+                        this.remove();
+                        score++;
+                            h1[0].innerHTML = score;
+
+            });
+            document.body.append(i);
+               
+        },1000)
+      
+  </script>
+</body>
+</html>

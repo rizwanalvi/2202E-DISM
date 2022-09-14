@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
     <style>
         input[type=button]{
             height: 150px;
@@ -26,6 +27,11 @@
     </style>
 </head>
 <body>
+    <label for="">Team O</label>
+    <input type="text" name="" id="txtO">
+</br>
+<label for="">Team X</label>
+<input type="text" name="" id="txtX">
     <div>
     <input type="button" value="" id="A1" >
     <input type="button" value="" id="A2" >
@@ -51,6 +57,7 @@
                 this.setAttribute("disabled",true);
                 turn = false;
                 this.classList.add('O');
+                FindWinner(this.value);
             }
             else{
 
@@ -58,6 +65,7 @@
                 this.setAttribute("disabled",true);
                 turn = true;
                 this.classList.add('X');
+                FindWinner(this.value);
             }
            
 
@@ -70,6 +78,7 @@
                 this.setAttribute("disabled",true);
                 turn = false;
                 this.classList.add('O');
+                FindWinner(this.value);
             }
             else{
 
@@ -77,6 +86,7 @@
                 this.setAttribute("disabled",true);
                 turn = true;
                 this.classList.add('X');
+                FindWinner(this.value);
             }
            
 
@@ -89,6 +99,7 @@
                 this.setAttribute("disabled",true);
                 this.classList.add('O');
                 turn = false;
+                FindWinner(this.value);
             }
             else{
 
@@ -96,6 +107,7 @@
                 this.setAttribute("disabled",true);
                 turn = true;
                 this.classList.add('X');
+                FindWinner(this.value);
             }
            
 
@@ -111,6 +123,7 @@
                 this.setAttribute("disabled",true);
                 turn = false;
                 this.classList.add('O');
+                FindWinner(this.value);
             }
             else{
 
@@ -118,6 +131,7 @@
                 this.setAttribute("disabled",true);
                 turn = true;
                 this.classList.add('X');
+                FindWinner(this.value);
             }
            
 
@@ -130,6 +144,7 @@
                 this.setAttribute("disabled",true);
                 turn = false;
                 this.classList.add('O');
+                FindWinner(this.value);
             }
             else{
 
@@ -137,6 +152,7 @@
                 this.setAttribute("disabled",true);
                 turn = true;
                 this.classList.add('X');
+                FindWinner(this.value);
             }
            
 
@@ -149,6 +165,7 @@
                 this.setAttribute("disabled",true);
                 this.classList.add('O');
                 turn = false;
+                FindWinner(this.value);
             }
             else{
 
@@ -156,6 +173,7 @@
                 this.setAttribute("disabled",true);
                 turn = true;
                 this.classList.add('X');
+                FindWinner(this.value);
             }
            
 
@@ -172,6 +190,7 @@
                 this.setAttribute("disabled",true);
                 turn = false;
                 this.classList.add('O');
+                FindWinner(this.value);
             }
             else{
 
@@ -179,6 +198,7 @@
                 this.setAttribute("disabled",true);
                 turn = true;
                 this.classList.add('X');
+                FindWinner(this.value);
             }
            
 
@@ -191,6 +211,7 @@
                 this.setAttribute("disabled",true);
                 turn = false;
                 this.classList.add('O');
+                FindWinner(this.value);
             }
             else{
 
@@ -198,6 +219,7 @@
                 this.setAttribute("disabled",true);
                 turn = true;
                 this.classList.add('X');
+                FindWinner(this.value);
             }
            
 
@@ -210,6 +232,7 @@
                 this.setAttribute("disabled",true);
                 this.classList.add('O');
                 turn = false;
+                FindWinner(this.value);
             }
             else{
 
@@ -217,10 +240,34 @@
                 this.setAttribute("disabled",true);
                 turn = true;
                 this.classList.add('X');
+                FindWinner(this.value);
             }
            
 
         });
+
+        function FindWinner(obj){
+                //Horizontal Rules
+                if(A1.value==A2.value && A2.value == A3.value && A1.getAttribute("disabled")){
+
+                    alert(obj);
+                }
+                if(B1.value==B2.value && B2.value == B3.value && B1.getAttribute("disabled")){
+
+                    alert(obj);
+                }
+                if(C1.value==C2.value && C2.value == C3.value && C1.getAttribute("disabled")){
+
+                        alert(obj);
+                }
+
+                  //Vertical Rules
+
+
+                //Diagonal Rules
+
+
+        }
     </script>
     
 </body>

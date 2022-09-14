@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        input[type=button]{
+            height: 150px;
+            width: 150px;
+            font-size: 50px;
+        }
+        div{
+            display: flex;
+            flex-direction: row;
+        }
+        .O{
+            background-color: olive;
+            color: whitesmoke;
+        }
+        .X{
+            background-color: goldenrod;
+            color: whitesmoke;
+        }
+    </style>
+</head>
+<body>
+    <div>
+    <input type="button" value="" id="A1" >
+    <input type="button" value="" id="A2" >
+    <input type="button" value="" id="A3" >
+</div>
+<div>
+    <input type="button" value="" id="B1" >
+    <input type="button" value="" id="B2" >
+    <input type="button" value="" id="B3" >
+</div>
+<div>
+    <input type="button" value="" id="C1" >
+    <input type="button" value="" id="C2" >
+    <input type="button" value="" id="C3" >
+</div>
+    <script>
+        let turn = true;
+       let BtnData = document.getElementsByTagName('input');
+      
+       BtnData.forEach(element => {
+            element.addEventListener("click",function(){
+alert('k');
+                if(turn){
+
+                this.value = "O";
+                this.setAttribute("disabled",true);
+                this.classList.add('O');
+                turn = false;
+                }
+                else{
+
+                this.value = "X";
+                this.setAttribute("disabled",true);
+                turn = true;
+                this.classList.add('X');
+
+                }
+            });
+       });
+
+       
+        function FindWinner(){
+                //Horizontal Rules
+                if(A1.value==A2.value && A2.value == A3.value && A1.getAttribute("disabled")){
+
+                    alert('Winner');
+                }
+                if(B1.value==B2.value && B2.value == B3.value && B1.getAttribute("disabled")){
+
+                    alert('Winner');
+                }
+                if(C1.value==C2.value && C2.value == C3.value && C1.getAttribute("disabled")){
+
+                        alert('Winner');
+                }
+
+                  //Vertical Rules
+
+
+                //Diagonal Rules
+
+
+        }
+    </script>
+    
+</body>
+</html>
