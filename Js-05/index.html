@@ -10,6 +10,7 @@
         body{
         position: relative;
         height: 100vh;
+        width: 100vw;
     }
     i{
         font-size: 5rem;
@@ -33,7 +34,7 @@
   <script>
     let score =0;
     let h1 = document.getElementsByTagName('h1');
-    let ColorCode =["blue","purple","goldenrod"];
+    //red = 2, blue =3, green = 1, purple = 20
       /*    window.addEventListener("load",function(){
             let score =0;
          let iCon = document.getElementsByTagName('i');
@@ -50,23 +51,54 @@
 
         });
         */
-       let position =0;
+
+        let ColorCode = ["red","blue","purple","green"];
+
+        let position =0;
         setInterval(function(){
+          let mHeight = window.innerHeight;
+          let mWidth = window.innerWidth;
+      
             let i = document.createElement('i');
-            position = Math.floor(Math.random()*ColorCode.length);
+            position =Math.floor(Math.random()*ColorCode.length);
+            let mTop = Math.random()* mHeight;
+            let mLeft = Math.random()* mWidth;
+            console.log(mTop+','+mLeft); 
             i.classList.add('fab');
             i.classList.add('fa-fly');
+            i.style.position = 'absolute';
+            i.style.left = mLeft+"px";
+            i.style.top = mTop+"px";
             i.style.color = ColorCode[position];
+          
             
             i.addEventListener('click',function(){
                         this.remove();
-                        score++;
+                        switch(this.style.color){
+                          case "red":
+                          score +=2; // score = score +2;
+                            break;
+                            case "blue":
+                          score +=3; // score = score +2;
+                            break;
+                            case "green":
+                          score +=1; // score = score +2;
+                            break;
+                            case "purple":
+                          score +=20; // score = score +2;
+                            break;
+                            
+
+
+                        }
+                       
                             h1[0].innerHTML = score;
 
             });
             document.body.append(i);
                
         },1000)
+        console.log();
       
   </script>
 </body>
